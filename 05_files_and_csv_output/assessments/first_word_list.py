@@ -1,10 +1,11 @@
+# Create a list called emotions that contains the first word of every line in emotion_words.txt.
 import os
 
 data = "data"
-file_name = "travel_plans.txt"
+file_name = "emotion_words.txt"
 file_path = os.path.join("..", data, file_name)
 
-three = []
+emotions = []
 
 try:
 
@@ -13,9 +14,9 @@ try:
 
             word_list = line.strip().split()
 
-            if len(word_list) >= 3:
-                third_word = word_list[2]
-                three.append(third_word)
+            if len(word_list) >= 1:
+                third_word = word_list[0]
+                emotions.append(third_word)
 
 
 except FileNotFoundError:
@@ -23,4 +24,4 @@ except FileNotFoundError:
 except Exception as e:
     print(f"An unexpected error occurred: {e}")
 
-print(three)
+print(emotions)
