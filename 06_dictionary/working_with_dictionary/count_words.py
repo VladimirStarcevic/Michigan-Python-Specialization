@@ -8,8 +8,8 @@ def get_num_of_words(list_of_words):
 
 
 word_list = sentence.strip().split()
-word_repetitions_number = get_num_of_words(word_list)
+word_counts = get_num_of_words(word_list)
 
-for item in word_repetitions_number.items():
+for item in word_counts.items():
     print(item)
 
