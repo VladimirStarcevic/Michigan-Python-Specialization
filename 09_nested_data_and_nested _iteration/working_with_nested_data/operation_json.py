@@ -61,6 +61,9 @@ xinyan_data = find_key_universal(user_profiles_data, "Xinyan")
 if xinyan_data:
     interactive_update_session(xinyan_data)
 
+updated_json_string = json.dumps(user_profiles_data, sort_keys=True, indent=4)
+print(updated_json_string)
+
 
 
 
