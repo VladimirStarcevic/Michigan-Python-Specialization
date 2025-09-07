@@ -1,6 +1,6 @@
 import os
 
-data_folder = "data"
+data_folder = "cache_folder"
 file_name = "emotion_words.txt"
 file_path = os.path.join("..", data_folder, file_name)
 

@@ -1,6 +1,6 @@
-# Provided is a dictionary that contains pokemon go player data,
+# Provided is a dictionary that contains pokemon go player cache_folder,
 # where each player reveals the amount of candy each of their pokemon have.
-# If you pooled all the data together, which pokemon has the highest number of candy?
+# If you pooled all the cache_folder together, which pokemon has the highest number of candy?
 # Assign that pokemon to the variable most_common_pokemon.
 
 # bentspoon => {'Rattata': 203, 'Pidgey': 120, 'Drowzee': 89, 'Squirtle': 35, 'Pikachu': 3, 'Eevee': 34, 'Magikarp': 300, 'Paras': 38}

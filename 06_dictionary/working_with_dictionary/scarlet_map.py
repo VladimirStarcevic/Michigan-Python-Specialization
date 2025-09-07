@@ -2,7 +2,7 @@ from typing import Dict, List, Any
 import os
 
 file_name = "scarlet.txt"
-data = "data"
+data = "cache_folder"
 file_path = os.path.join("..", data, file_name)
 
 def clean_text(text: str) -> str:

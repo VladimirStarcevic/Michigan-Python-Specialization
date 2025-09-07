@@ -1,6 +1,6 @@
 import os
 
-data = "data"
+data = "cache_folder"
 file_name = "travel_plans.txt"
 file_path = os.path.join("..", data, file_name)
 

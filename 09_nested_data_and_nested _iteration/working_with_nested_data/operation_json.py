@@ -39,7 +39,7 @@ def interactive_update_session(user_data: dict):
             key, value_str = command.split()
             value = int(value_str)
             update_users_status(user_data, key, value)
-            print("Updated data:", user_data)
+            print("Updated cache_folder:", user_data)
         except ValueError:
            print("Invalid format. Please use 'key value' (e.g., 'tweets 5').")
 

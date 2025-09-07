@@ -2,7 +2,7 @@ import os
 import csv
 
 
-data_folder = "data"
+data_folder = "cache_folder"
 file_name = "SP500.txt"
 file_path = os.path.join("..", data_folder, file_name)
 

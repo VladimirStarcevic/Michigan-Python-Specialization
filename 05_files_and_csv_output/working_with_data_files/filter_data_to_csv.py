@@ -1,6 +1,6 @@
 import os
 
-data_folder = "data"
+data_folder = "cache_folder"
 file_name = "olympics.txt"
 
 output_file_name = 'medal_winners.csv'
@@ -31,7 +31,7 @@ try:
             csv_line = ",".join(winner_info_list)
             write_file.write(csv_line + "\n")
 
-        print(f"Successfully created and saved data to {output_file_name}")
+        print(f"Successfully created and saved cache_folder to {output_file_name}")
 
 
 

@@ -1,6 +1,6 @@
 import os
 
-data = "data"
+data = "cache_folder"
 file_name = "monza_2023_results.txt"
 output_file_name = "monza_podium.csv"
 
