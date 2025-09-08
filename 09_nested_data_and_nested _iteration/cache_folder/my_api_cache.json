@@ -1,3 +1,25 @@
 {
-    "test_key": "test_value"
+    "test_key": "test_value",
+    "https://api.datamuse.com/words_max-5_rel_syn-love": [
+        {
+            "word": "passion",
+            "score": 63046
+        },
+        {
+            "word": "beloved",
+            "score": 25035
+        },
+        {
+            "word": "lovemaking",
+            "score": 18025
+        },
+        {
+            "word": "enjoy",
+            "score": 17036
+        },
+        {
+            "word": "honey",
+            "score": 14058
+        }
+    ]
 }

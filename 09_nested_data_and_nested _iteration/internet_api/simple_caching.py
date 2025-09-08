@@ -47,25 +47,37 @@ def write_cache_to_file(cache_path, cache_data):
         print(f"An unexpected error occurred: {e}")
 
 
+def get_with_caching(base_url, params_dict, cache_filepath):
+
+    key_cache = make_cache_key(base_url, params_dict)
+    current_cache = read_cache_from_file(cache_filepath)
+
+    if key_cache in current_cache:
+        print("Cache Hit!")
+        result = current_cache[key_cache]
+        return result
+    else:
+        print("Cache miss! Fetching from API....")
+        try:
+            response = requests.get(BASE_URL, params=query_params, timeout=5)
+            response.raise_for_status()
+            response_txt = response.json()
+
+            current_cache[key_cache] = response_txt
+            write_cache_to_file(cache_filepath, current_cache)
+            return response_txt
+
+        except requests.exceptions.RequestException as e:
+            print(f"\nThere is error on communication with server: {e}")
+        except json.JSONDecodeError:
+            print("\nERROR: Server did not return valid JSON.")
+
 sinonym_to_search = input("Enter word to search sinonym for: ")
 query_params = {
     "rel_syn": sinonym_to_search,
     "max": 5
 }
 
-cache_key = make_cache_key(BASE_URL,query_params)
-print(cache_key)
-print("=================  TEST  ========================")
-
-my_test_cache = {'test_key': 'test_value'}
-
-
-write_cache_to_file(CACHE_FILENAME, my_test_cache)
-print(f"Write data in file: {CACHE_FILENAME}")
-
-
-reade_data = read_cache_from_file(CACHE_FILENAME)
-print(f"Reading data: {reade_data}")
-
-
-assert my_test_cache == reade_data
+print(get_with_caching(BASE_URL, query_params, cache_filepath=file_cache_path))
+print("============================================================")
+print(get_with_caching(BASE_URL, query_params, cache_filepath=file_cache_path))
