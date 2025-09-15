@@ -1,4 +1,4 @@
-sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
+sentence = "python is a high level general purpose programming language that can be applied to many different initial_prototypes of problems."
 
 words_list = sentence.split()
 num_a_or_e = 0

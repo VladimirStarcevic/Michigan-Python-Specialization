@@ -1,0 +1,18 @@
+{
+  "project_name": "F1 Data Analyzer",
+  "version": "1.0",
+  "author": "Vladimir",
+  "api_settings": {
+    "base_url": "https://api.ergast.com/f1/",
+    "timeout": 30,
+    "retries": {
+      "count": 3,
+      "delay": 5
+    }
+  },
+  "database": {
+    "type": "SQLite",
+    "path": "data/f1_data.db",
+    "log_queries": true
+  }
+}
